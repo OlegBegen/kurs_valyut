@@ -14,7 +14,13 @@ import java.security.cert.X509Certificate;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
+       disableSSL();
+        try {
+            String response = getExchRares();
+            System.out.println(response);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
